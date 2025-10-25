@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARI - Ativo de Renda Imobiliária</title>
+    <link rel="shortcut icon" href="/img/favicon ari.png" type="image/x-icon">
+    <style>
+        /* --- Configurações Gerais --- */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4; /* Fundo cinza claro, como na imagem */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #555; /* Cor de texto padrão */
+        }
+
+        .page-header img {
+            max-width: 50%; /* Garante que a imagem seja responsiva */
+            height: auto; /* Mantém a proporção */
+            border-radius: 10px; /* Bordas arredondadas */
+            display: block; /* Remove espaço extra abaixo da imagem */
+            margin: 0 auto; /* Centraliza a imagem */
+
+        }
+        
+        /* O CSS antigo para h1, subtitle e brand foi removido pois não é mais usado */
+
+        /* --- Conteúdo Principal --- */
+        .main-content {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0a2c4e; /* Azul escuro do título */
+            margin-top: 70px;
+            margin-bottom: 10px;
+        }
+
+        .main-content .subheader {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* --- Container do Vídeo (COM LÓGICA RESPONSIVA) --- */
+        .video-container {
+            position: relative;
+            /* REGRA PADRÃO (MOBILE-FIRST): Proporção 16:9 */
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px; /* Sua largura máxima definida */
+            background: #000;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra suave */
+            margin-top: 70px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- Textos de Footer --- */
+        .page-footer {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            margin-top: 55px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #666;
+            padding-bottom: 30px; /* Adiciona espaço no final */
+        }
+        
+        .page-footer p {
+            margin: -30px 0;
+        }
+
+        /* --- Estilos para Redes Sociais --- */
+        .social-media {
+            margin-top: 45px; /* Espaço acima dos ícones */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px; /* Espaço entre os ícones */
+        }
+
+        .social-media a {
+            color: #0a2c4e; /* Cor dos ícones (azul escuro) */
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #0e3b68; /* Cor mais clara no hover */
+            transform: scale(1.1); /* Efeito de zoom no hover */
+        }
+
+        .social-media svg {
+            width: 32px; /* Tamanho dos ícones */
+            height: 32px;
+        }
+
+        /* --- MEDIA QUERY (A LÓGICA DO DESKTOP) --- */
+        @media (min-width: 768px) {
+            
+            /* Se a tela for 768px ou maior, muda a proporção do vídeo */
+            .video-container {
+                /* Proporção 21:9 (42.85%) que você quer para DESKTOP */
+                padding-bottom: 52.25%;
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 932px) {
+            .page-header img {
+                max-width: 100%; /* Imagem um pouco menor em telas maiores */
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <img src="/img/capa simulador atual.png" alt="Logo ARI - Ativo de Renda Imobiliária">
+    </header>
+
+    <main class="main-content">
+        
+        <h2>ARI - Ativo de Renda Imobiliária</h2>
+        <p class="subheader">Conheça um pouco mais sobre o ARI - Ativo de Renda Imobiliária</p>
+
+        <div class="video-container">
+            <iframe 
+                id="meuVideo"
+                src="" 
+                title="Apresentação ARI - Ativo de Renda Imobiliária" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>Siga nossos perfis oficiais e fique por dentro das atualizações.</p>
+
+        <div class="social-media">
+    <a href="https://www.youtube.com/@arquitetofabriciopavesi" target="_blank" title="Youtube">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"></path></svg>
+    </a>
+    <a href="https://www.facebook.com/arck1pro" target="_blank" title="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+    </a>
+    <a href="https://www.instagram.com/arck1pro/" target="_blank" title="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z"></path></svg>
+    </a>
+</div>
+    </footer>
+
+    
+    <script>
+        // --- CÉREBRO DA PÁGINA ---
+        
+        // 1. Defina seus 7 links de vídeo (ex: links de "embed" do YouTube)
+        const videos = {
+            '1': 'https://www.youtube.com/embed/iDwVFAUrDSA?autoplay=1&mute=1', // Vídeo 1 (Exemplo da imagem)
+            '2': 'https://www.youtube.com/embed/QnfrRqUkQpc?autoplay=1&mute=1', // Vídeo 2
+            '3': 'https://www.youtube.com/embed/aMHzffyGkYw?autoplay=1&mute=1', // Vídeo 3
+            '4': 'https://www.youtube.com/embed/3cafJvcR2vM?autoplay=1&mute=1', // Vídeo 4
+            '5': 'https://www.youtube.com/embed/sQ2NxNee8tw?autoplay=1&mute=1', // Vídeo 5
+            '6': 'https://www.youtube.com/embed/c-a3Dtpo7zY?autoplay=1&mute=1', // Vídeo 6
+            // Vídeo padrão (caso o link não tenha o parâmetro ?video=)
+            'padrao': 'https://www.youtube.com/embed/iDwVFAUrDSA?autoplay=1&mute=1'
+        };
+
+        // 2. Crie uma função para carregar o vídeo
+        function carregarVideo() {
+            // Pega os parâmetros da URL (ex: ?video=1)
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Pega o valor do parâmetro 'video'
+            const videoId = urlParams.get('video'); // '1', '2', etc.
+
+            // Encontra o link do vídeo correspondente ou usa o padrão
+            const linkDoVideo = videos[videoId] || videos['padrao'];
+
+            // Pega o elemento iframe pelo ID
+            const iframe = document.getElementById('meuVideo');
+
+            // Define o atributo 'src' do iframe para o link do vídeo
+            if (iframe) {
+                iframe.src = linkDoVideo;
+            }
+        }
+
+        // 3. Chame a função assim que a página carregar
+        document.addEventListener('DOMContentLoaded', carregarVideo);
+    </script>
+
+</body>
+</html>
